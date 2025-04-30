@@ -97,7 +97,7 @@ function toDashCase(string) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
 I:input a string and single character
-O: return true if character is same; false if not same - case doesn't matter 
+O: return true if first character is same; false if not same - case doesn't matter 
 C:
 E: 
 */
@@ -126,12 +126,21 @@ function beginsWith(string, char) {
  *
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
- */
+I:input a string and single character
+O: return true if last character is same; false if not same - case doesn't matter 
+C:
+E: 
+*/
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-
-
+    //getting last letter of string
+    let lastLetter = string.slice(-1);
+    //use if statement to determine if same character
+    if (lastLetter.toLowerCase() === char || lastLetter.toUpperCase() === char){
+        return true;
+    } else {
+        return false;
+    }
     // YOUR CODE ABOVE HERE //
 }
 
@@ -139,11 +148,16 @@ function endsWith(string, char) {
  * Given two input Strings, return the Strings concatenated into one.
  *
  * TIP: What's the operator to concatenate two Strings?
- */
+ I:input 2 strings 
+O: return 1 string combined 
+C:
+E: 
+*/
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+    //concat the strings    
+    let newString = stringOne.concat(stringTwo);
+    return newString;
 
     // YOUR CODE ABOVE HERE //
 }
@@ -157,12 +171,20 @@ function concat(stringOne, stringTwo) {
  *
  * TIP: This Function pulls out all the arguments passed to it and stores them
  *      in an Array called args.
- */
+I:input 2 strings 
+O: return 1 string combined 
+C: use join
+E: use Array.from to pull each word 
+*/
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
-
+    //join args into new string
+    let newString = args.join('');
+    //return newString
+    return newString;
+    
+    
     // YOUR CODE ABOVE HERE //
 }
 
@@ -174,9 +196,25 @@ function join(stringOne, stringTwo) {
  *      longest("ben", "maggie");   //-> "maggie"
  *
  * TIP: What property of the String do we need to compare?
- */
+I:input 2 strings 
+O: return the longest string 
+C:
+E: 
+*/
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
+    //determine length of strings
+    let lenOne = stringOne.length;
+    let lenTwo = stringTwo.length;
+    //if statement to determine which is longer
+    if (lenOne > lenTwo){
+        //if stringOne longer return
+        return stringOne;
+    } else {
+        //otherwise StringTwo is longer
+        return stringTwo;
+    }
+
 
 
 
@@ -189,10 +227,23 @@ function longest(stringOne, stringTwo) {
  * first, and return 0 if they're equal.
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
- */
+I:input 2 strings 
+O: return 1 if first string comes first in alpha; -1 if 2nd string first in alpha; 0 if equal 
+C:
+E: 
+*/
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    //using truthy and falsy to determine alpha order
+    if (stringOne < stringTwo){
+        ////returns 1 stringOne comes first alpha
+        return 1;
+    } else if (stringOne > stringTwo){
+        //returns -1 stringTwo comes first alpha
+        return -1;
+    } else {
+        return 0;
+    }
     // YOUR CODE ABOVE HERE //
 }
 
@@ -203,10 +254,24 @@ function sortAscending(stringOne, stringTwo) {
  * first, and return 0 if they're equal.
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
- */
+I:input 2 strings 
+O: return 1 if first string comes later in alpha; -1 if 2nd string first in alpha; 0 if equal 
+C:
+E: 
+*/
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    //using truthy and falsy to determine alpha order
+    if (stringOne > stringTwo){
+        ////returns 1 stringOne comes first alpha
+        return 1;
+    } else if (stringOne < stringTwo){
+        //returns -1 stringTwo comes first alpha
+        return -1;
+    } else {
+        //return 0 if equal 
+        return 0;
+    }
 
 
 
