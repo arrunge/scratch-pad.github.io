@@ -12,11 +12,17 @@
  * TIP: In JavaScript, how can we decipher the length of a String?
  * work?
  */
+/*
+I:input a string
+O: output length of string 
+C:
+E:
+*/
 function length(string) {
     // YOUR CODE BELOW HERE //
-
-
-    
+    //getting length of string and return
+    return string.length;
+  
     // YOUR CODE ABOVE HERE //
 }
 
@@ -25,23 +31,31 @@ function length(string) {
 /**
  * Given an input String, return a new String forced to lowercase.
  */
+/*
+I:input a string
+O: return string in lowercase 
+C:
+E:
+*/
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
-   
-
-
+   //force string to lowercase and return
+   return (string.toLowerCase());
 
     // YOUR CODE ABOVE HERE //
 }
 
 /**
  * Given an input String, return a new String forced to uppercase.
+I:input a string
+O: return string in uppercase 
+C:
+E:
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-
-
-
+    //force string to uppercase and return
+   return (string.toUpperCase());
     // YOUR CODE ABOVE HERE //
 }
 
@@ -57,12 +71,17 @@ function toUpperCase(string) {
  *      methods split and join?
  *
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
- */
+ I:input a string
+O: return a string in lowercase and spaces replaced with dashes 
+C:
+E:
+*/
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-
-
-
+    //force to lowercase and store in lowerString
+    let lowerString = string.toLowerCase();
+    //replace spaces with dashes and return
+    return (lowerString.replaceAll(" ", "-"));
     // YOUR CODE ABOVE HERE //
 }
 
@@ -77,11 +96,21 @@ function toDashCase(string) {
  *
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
- */
+I:input a string and single character
+O: return true if character is same; false if not same - case doesn't matter 
+C:
+E: 
+*/
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-    
+    //store first letter of string
+    let firstLetter = string[0];
+    //use if statement to determine if same character
+    if (firstLetter.toLowerCase() === char || firstLetter.toUpperCase() === char){
+        return true;
+    } else {
+        return false;
+    }
 
     // YOUR CODE ABOVE HERE //
 }
