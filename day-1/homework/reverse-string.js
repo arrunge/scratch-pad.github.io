@@ -28,7 +28,7 @@ function reverseString(input) {
     //new string to store reverse order of input string
     let revString = '';
     //determine length of input string
-    //let lenString = input.length;
+    
     //looping backward to access char in input string
     for (var i = input.length - 1; i >= 0; i --){
       revString = revString.concat(input[i]);
