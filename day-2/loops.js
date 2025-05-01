@@ -163,7 +163,7 @@ function printObjectValuesInReverse(object) {
   //array to store object values
   let arrValues = Object.values(object);
   //loop through array of values
-    for (index = arrValues.length - 1; index >= 0; i--){
+    for (var index = arrValues.length - 1; index >= 0; index--){
     //print values to console
     console.log(arrValues[index]);
   }
