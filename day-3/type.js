@@ -13,17 +13,25 @@
  * work?
  * 
  * HINT: There is a method that can help with this.
- */
+ I: input value
+O: return true if array; false if not
+C:
+E:
+*/
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+    //determine if value is array
+    if (Array.isArray(value)){
+        //if true returns true
+        return true;
+    } else {
+        //not array returns false
+        return false;
+    }
+      
     
     // YOUR CODE ABOVE HERE //
 }
-
-
 
 /** 
  * Given an input value, return true if the value is an Object intended as a 
@@ -34,15 +42,30 @@ function isArray(value) {
  * with typeof.
  * 
  * HINT: look up how to figure out if something is an instance of the Date object.
- * 
+I: input value
+O: return true if object; false if not
+C:
+E: 
+* 
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
-
-    
-    
-    
+    // using if else to go through criteria
+    //determine if value is array - if true-returns false not object
+    if (Array.isArray(value)){
+        return false;
+    } else if (value === null){
+        //determine if value is null - if true-returns false not object
+        return false;
+    } else if (value instanceof Date){
+        ///determine if value is date - if true-returns false not object
+        return false;
+    } else if (typeof value === 'object'){
+        //determine if typeof is object - if true-returns true for object
+        return true;
+    } else {
+        return false;
+    }      
     // YOUR CODE ABOVE HERE //
 }
 
@@ -53,10 +76,28 @@ function isObject(value) {
  * intended as a collection, false if otherwise.
  * 
  * TIP: Similar to isObject, but we must return true if the value is an Array.
- */
+ I: input value
+O: return true if object; true for array; false if not
+C:
+E:
+*/
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    
+    //determine if value is array - if true-returns false not object
+    if (Array.isArray(value)){
+        return true;
+    } else if (value === null){
+        //determine if value is null - if true-returns false not object
+        return false;
+    } else if (value instanceof Date){
+        ///determine if value is date - if true-returns false not object
+        return false;
+    } else if (typeof value === 'object'){
+        //determine if typeof is object - if true-returns true for object
+        return true;
+    } else {
+        return false;
+    }
     
     
     
@@ -81,11 +122,28 @@ function isCollection(value) {
  *    typeOf(134) -> "number"
  *    typeOf("javascript") -> "string"
  *    typeOf([1,2,3]) -> "array"
- */ 
+ I: input value
+O: return string of the type
+C:
+E: 
+*/ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
-    
+    //if typeof is object - determine if array, null, date or object to return string
+    if (Array.isArray(value)){
+        return 'array';
+    } else if (value === null){
+        //determine if value is null - if true-returns false not object
+        return 'null';
+    } else if (value instanceof Date){
+        ///determine if value is date - if true-returns false not object
+        return 'date';
+    } else if (typeof value === 'object'){
+        //determine if typeof is object - if true-returns true for object
+        return 'object';
+    } else {
+        return typeof value;
+    }
     
     
     // YOUR CODE ABOVE HERE //
