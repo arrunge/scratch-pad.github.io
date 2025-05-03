@@ -20,11 +20,30 @@
  *  a. create something to collect the output you'll return.
  *  b. you'll need a loop, which one is best?
  *  c. you'll wanna make use of the push() method of Array.
- */
+I: function - 2 parameters - integers
+O: return array of integers between parameters - inclusive
+C:
+E: 
+*/
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
+    //declare outputArray to store integers
+    let outputArray = [];
+    //determine if para1 or para2 is greater - to determine which for loop to go use
+    if (start < end){
+        let index = start;
+        while (index <= end){
+            outputArray.push(index);
+            index++;
+        }
+    } else if (start > end){
+        let indexTwo = start;
+        while (indexTwo >= end){
+            outputArray.push(indexTwo);
+            indexTwo--;
+        }
+    }
+    return outputArray; 
     
     
     // YOUR CODE GOES ABOVE HERE //
