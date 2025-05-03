@@ -142,6 +142,7 @@ function typeOf(value) {
         //determine if typeof is object - if true-returns true for object
         return 'object';
     } else {
+        //returns all other typeof - string, undefined, number, etc
         return typeof value;
     }
     
